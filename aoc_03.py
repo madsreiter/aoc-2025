@@ -12,8 +12,8 @@ def battery_fkt(n_cifre):
     res = 0
     for i in inp:
         cifre = []
-        for ciffer in range(n_cifre):
-            ciffer = max([t for t in i[:len(i)-n_cifre+ciffer+1]])
+        for ciffer_i in range(n_cifre):
+            ciffer = max([t for t in i[:len(i)-n_cifre+ciffer_i+1]])
             cifre.append(ciffer)
             i = i[i.index(ciffer)+1:]
         res += int("".join(cifre))
