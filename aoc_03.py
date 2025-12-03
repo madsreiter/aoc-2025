@@ -28,14 +28,6 @@ print("Del 1:")
 
 
 
-# del1 = 0
-# for i in inp:
-#     ciffer1 = max([t for t in i[:len(i)-1]])
-#     maks_ind = i.index(ciffer1)
-#     ciffer2 = max([t for t in i[maks_ind+1:]])
-#     del1 += int(ciffer1+ciffer2)
-# print(del1)
-
 print(battery_fkt(n_cifre_1))
 # 17524
 
@@ -49,3 +41,16 @@ print("Del 2:")
 
 print(battery_fkt(n_cifre_2))
 # 173848577117276
+
+
+
+
+# Løsning til del 1 inden generalisering til del 2:
+
+# del1 = 0
+# for i in inp:
+#     ciffer1 = max([t for t in i[:len(i)-1]])
+#     maks_ind = i.index(ciffer1)
+#     ciffer2 = max([t for t in i[maks_ind+1:]])
+#     del1 += int(ciffer1+ciffer2)
+# print(del1)
