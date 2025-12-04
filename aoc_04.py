@@ -35,7 +35,6 @@ for r in range(R):
                 nc = c + n[1]
                 if (nr, nc) in d:
                     adjacent += d[(nr,nc)]
-            #print(r,c,adjacent)
             if adjacent < 4:
                 res += 1
 print(res)
@@ -50,9 +49,7 @@ print("Del 2:")
 
 
 gl_sum = R*C
-iter = 0
 while sum(d.values()) != gl_sum:
-    iter += 1
     gl_sum = sum(d.values())
     for r in range(R):
         for c in range(C):
