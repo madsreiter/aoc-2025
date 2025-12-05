@@ -5,12 +5,9 @@ with open("../../Input/2025/"+inputnavn) as f:
     for line in f:
         inp.append(line.rstrip())
 
-inp1 = []
-for i in inp[:inp.index("")]:
-    t = i.split("-")
-    inp1.append([int(t[0]), int(t[1])])
-
-inp2 = [int(i) for i in inp[inp.index("")+1:]]
+opdel_data = inp.index("")
+inp1 = [list(map(int, i.split("-"))) for i in inp[:opdel_data]]
+inp2 = [int(i) for i in inp[opdel_data+1:]]
 
 
 
