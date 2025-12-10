@@ -45,11 +45,11 @@ for tile_curr in inp:
     tile_gl = tile_curr
 
 
-def in_green_fct(a, b):
-    row_min = min(a[0], b[0])
-    col_min = min(a[1], b[1])
-    row_max = max(a[0], b[0])
-    col_max = max(a[1], b[1])
+def in_green_fct(s, t):
+    row_min = min(s[0], t[0])
+    col_min = min(s[1], t[1])
+    row_max = max(s[0], t[0])
+    col_max = max(s[1], t[1])
     # Left
     if any(e for e in perimeter_hor if row_min < e[0][0] < row_max and e[0][1] <= col_min and e[1][1] >= col_min + 1):
         return False
@@ -67,6 +67,6 @@ def in_green_fct(a, b):
 
 for (t1, t2), a in areas_sorted:
     if in_green_fct(t1, t2):
+        print(a)
         break
-print(a)
 # 1439894345
