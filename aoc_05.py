@@ -19,10 +19,7 @@ print("Del 1:")
 
 tael = 0
 for i2 in inp2:
-    for i1 in inp1:
-        if i1[0] <= i2 <= i1[1]:
-            tael += 1
-            break
+    tael += any(i1[0] <= i2 <= i1[1] for i1 in inp1)
 print(tael)
 # 661
 
@@ -36,8 +33,7 @@ print("Del 2:")
 
 def konsolider_int(int_ind):
     int_ind.sort()
-    int_ud = []
-    int_ud.append(int_ind[0])
+    int_ud = [int_ind[0]]
     for i1 in int_ind:
         min_i = i1[0]
         max_i = i1[1]

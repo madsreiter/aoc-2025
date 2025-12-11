@@ -107,8 +107,8 @@ def circuits_fct(dict_dist, remove=True, max_times=None, debug_print=False):
         d_circuits.update(dict(zip(circuit1, (d_circuits[ind_circuits[0]],)*len(circuit1))))
 
         if iter == max_times:
-            circuitnumbers = [g for g in d_circuits.values()]
-            return prod(sorted([circuitnumbers.count(x) for x in set(circuitnumbers)], reverse=True)[:3])
+            circuit_numbers = [g for g in d_circuits.values()]
+            return prod(sorted([circuit_numbers.count(x) for x in set(circuit_numbers)], reverse=True)[:3])
 
         n_grp = len(set(d_circuits.values()))
     return inp[ind_junctions[0]][0] * inp[ind_junctions[1]][0]

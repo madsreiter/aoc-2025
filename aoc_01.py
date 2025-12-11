@@ -25,7 +25,7 @@ for i in inp:
     del2add += int(tal / modulo)
     tal = tal%modulo
     ny_hvor = hvor + retn*tal
-    if (hvor > 0 and ny_hvor < 0) or ny_hvor > modulo:
+    if hvor > 0 > ny_hvor or ny_hvor > modulo:
         del2add += 1
     hvor = ny_hvor % modulo
     if hvor == 0:

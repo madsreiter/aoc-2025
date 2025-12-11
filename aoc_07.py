@@ -14,8 +14,7 @@ print("Del 1:")
 
 
 del1 = 0
-beams = {}
-beams[inp[0].index("S")] = 1
+beams = {inp[0].index("S"): 1}
 for ind in range(1, len(inp)-1):
     prev_beams = beams.copy()
     beams = {}
