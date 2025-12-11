@@ -95,7 +95,7 @@ def circuits_fct(dict_dist, remove=True, max_times=None, debug_print=False):
         # Remove minimum distance from dict_dist
         # If remove=True, also remove all distances between now connected circuits
         circuit1 = [j for j, v in d_circuits.items() if v == d_circuits[ind_circuits[1]]]
-        if remove == True:
+        if remove:
             circuit0 = [j for j, v in d_circuits.items() if v == d_circuits[ind_circuits[0]]]
             for c0 in circuit0:
                 for c1 in circuit1:
