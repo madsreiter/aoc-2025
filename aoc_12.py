@@ -8,7 +8,7 @@ with open("../../Input/2025/"+inputnavn) as f:
 presents = []
 trees = []
 p = False
-for x, i in enumerate(inp):
+for i in inp:
     if ":" in i and len(i) > 2:
         s, n = i.split(": ")
         s = tuple(map(int, s.split("x")))
@@ -33,13 +33,25 @@ print("Del 1:")
 
 present_sizes = [p.count("#") for p in presents]
 
-del1 = 0
-for t, np in trees:
+accepted = []
+rejected = []
+unknown = []
+for i, (t, np) in enumerate(trees):
     t_s = t[0] * t[1]
     p_s = sum(a*b for a, b in zip(present_sizes, np))
-    if p_s <= t_s:
-        del1 += 1
-print(del1)
+    if t_s < p_s:
+        rejected.append(i)
+    elif int(t[0]/3) * int(t[1]/3) >= sum(np):
+        accepted.append(i)
+    else:
+        unknown.append(i)
+
+if len(unknown):
+    print("You're in big trouble mister!")
+    print("Answer in interval between " + str(len(accepted)) + " and " + str(len(accepted)+len(unknown)) + ".")
+    print(str(len(unknown)) + " christmas with status \"Unknown\" needs further examination.")
+else:
+    print(len(accepted))
 
 #
 #
