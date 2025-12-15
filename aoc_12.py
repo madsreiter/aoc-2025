@@ -41,7 +41,7 @@ for i, (t, np) in enumerate(trees):
     p_s = sum(a*b for a, b in zip(present_sizes, np))
     if t_s < p_s:
         rejected.append(i)
-    elif int(t[0]/3) * int(t[1]/3) >= sum(np):
+    elif (t[0]//3) * (t[1]//3) >= sum(np):
         accepted.append(i)
     else:
         unknown.append(i)
